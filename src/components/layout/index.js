@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export function Layout() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Box
         minWidth={"100%"}
         minHeight={"100vh"}

@@ -18,16 +18,17 @@ function lanesReducer(state, action) {
 function Home() {
   const [lanes, dispatch] = useReducer(lanesReducer, initialState);
 
-  console.log(lanes);
-
   return (
     <Box
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      width={"100%"}
     >
-      <Typography variant="h3">Data lanes</Typography>
+      <Typography variant="h3" mb={3}>
+        Data lanes (Events)
+      </Typography>
 
       <RenderLanes lanes={lanes} />
     </Box>
