@@ -682,6 +682,8 @@ var _material = require("@mui/material");
 var _intex = require("../../hooks/assignLanes/intex");
 var _timelineItems = require("../../hooks/assignLanes/timelineItems");
 var _timelineItemsDefault = parcelHelpers.interopDefault(_timelineItems);
+var _renderLanes = require("./components/molecules/RenderLanes");
+var _renderLanesDefault = parcelHelpers.interopDefault(_renderLanes);
 var _s = $RefreshSig$();
 const initialState = (0, _intex.assignLanes)((0, _timelineItemsDefault.default));
 function lanesReducer(state, action) {
@@ -696,10 +698,32 @@ function Home() {
     _s();
     const [lanes, dispatch] = (0, _react.useReducer)(lanesReducer, initialState);
     console.log(lanes);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {}, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Box), {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _material.Typography), {
+                variant: "h3",
+                children: "Data lanes"
+            }, void 0, false, {
+                fileName: "src/pages/Home/index.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _renderLanesDefault.default), {
+                lanes: lanes
+            }, void 0, false, {
+                fileName: "src/pages/Home/index.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "src/pages/Home/index.js",
-        lineNumber: 22,
-        columnNumber: 10
+        lineNumber: 24,
+        columnNumber: 5
     }, this);
 }
 _s(Home, "HD5PrKV0+x37J2JZhjjnqVx8HpE=");
@@ -714,7 +738,7 @@ $RefreshReg$(_c1, "%default%");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"3KIXa","../../hooks/assignLanes/intex":"6MJe4","../../hooks/assignLanes/timelineItems":"lwwcp","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6MJe4":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@mui/material":"3KIXa","../../hooks/assignLanes/intex":"6MJe4","../../hooks/assignLanes/timelineItems":"lwwcp","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/molecules/RenderLanes":"7JibJ"}],"6MJe4":[function(require,module,exports,__globalThis) {
 /**
  * Takes an array of items and assigns them to lanes based on start/end dates.
  * @returns an array of arrays containing items.
@@ -841,6 +865,47 @@ const timelineItems = [
 ];
 exports.default = timelineItems;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["znlhE"], null, "parcelRequire9642", {})
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7JibJ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f1a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f1a8.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f1a8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+function RenderLanes({ lanes }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Box, {
+        display: "flex",
+        gap: 3,
+        flexDirection: "column",
+        children: lanes && lanes.length > 0 && lanes.map((lane, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Box, {
+                children: lane?.map((itens)=>itens?.name)
+            }, index, false, {
+                fileName: "src/pages/Home/components/molecules/RenderLanes.js",
+                lineNumber: 9,
+                columnNumber: 11
+            }, this))
+    }, void 0, false, {
+        fileName: "src/pages/Home/components/molecules/RenderLanes.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = RenderLanes;
+exports.default = /*#__PURE__*/ _c1 = (0, _react.memo)(RenderLanes);
+var _c, _c1;
+$RefreshReg$(_c, "RenderLanes");
+$RefreshReg$(_c1, "%default%");
+
+  $parcel$ReactRefreshHelpers$f1a8.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["znlhE"], null, "parcelRequire9642", {})
 
 //# sourceMappingURL=Home.e0c15902.js.map
