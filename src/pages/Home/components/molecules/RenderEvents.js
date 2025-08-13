@@ -77,8 +77,12 @@ export default function RenderEvents({ eventLine, minDay, totalDays }) {
           }}
           arrow
           placement="top"
+          onClick={() =>
+            setSelectedItem(() => ({ data: item, openModal: true }))
+          }
         >
           <Box
+            data-testid={`${index} - ${item?.name}`}
             sx={{
               width: `${item ? duration * 12 : duration * 6}%`,
               height: "100%",
