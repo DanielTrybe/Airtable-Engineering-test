@@ -90,7 +90,7 @@ molecules/
 RenderEvents.jsx
 RenderLanes.jsx
 organisms/
-CustomModal.jsx (optional)
+CustomModal.jsx
 timelineItems.js
 assignLanes.js
 setupTests.js
