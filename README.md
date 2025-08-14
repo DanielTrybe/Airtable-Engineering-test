@@ -111,3 +111,17 @@ setupTests.js
 * For responsiveness, blocks use width proportional to the number of days (e.g., `%` based on `totalDays`).
 
 ---
+
+## 💡 Implementation Notes
+
+### What I liked about my implementation
+I am happy with the compact lane design that avoids overlapping events while keeping the timeline clear and easy to read. The combination of **React**, **MUI**, and **date-fns** allows for a flexible and responsive UI. Tooltips provide additional information without cluttering the timeline view.
+
+### What I would change if I were to do it again
+If I were to redo the project, I would add support for zooming and panning on the timeline for better navigation with large datasets. I would also implement drag-and-drop editing of events to make the timeline more interactive. Additionally, I might refactor the lane and event rendering logic to make it more reusable and modular. I didn't have time to implement additional features, such as zooming or editing information directly in the lanes
+
+### Design decisions
+I focused on simplicity and readability. I looked at popular timelines components for inspiration. This helped guide decisions on block sizing, spacing, and color coding.
+
+### Testing approach
+Given more time, I would expand the test coverage.
